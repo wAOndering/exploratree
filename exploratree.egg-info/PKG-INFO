@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: exploratree
+Version: 0.0.1
+Author: 
+Author-email: vaissiere.t@ufl.edu
+Keywords: python,first package
+Classifier: Development Status :: 3 - Alpha
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Microsoft :: Windows

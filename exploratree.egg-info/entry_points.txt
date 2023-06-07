@@ -1,0 +1,4 @@
+[console_scripts]
+exploratree-fakeDir = exploratree.create_directory:main
+exploratree-get = exploratree.directory_export:main
+exploratree-search = exploratree.search:main
