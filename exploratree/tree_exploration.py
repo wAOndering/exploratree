@@ -55,3 +55,8 @@ def search_file(tree, search_string, current_path=''):
     if 'children' in tree:
         for child in tree['children']:
             search_file(child, search_string, current_path)
+
+######### --- get the path of origin
+def pathOforigin(directory_path, output_file):
+    with open(output_file, 'w') as file:
+        file.write(directory_path)

@@ -1,4 +1,4 @@
-# Directory Tree Manager
+# exploratree
 
 exploratree is a Python program that allows you to save, search, and export directory tree structures. It provides functionality to store directory hierarchies, search for specific directories or files, and export the directory tree in different formats.
 
@@ -13,12 +13,19 @@ exploratree is a Python program that allows you to save, search, and export dire
 ## Installation
 
 1. Clone the repository to your local machine:
-   - `conda env create -f environment.yaml`
-   - `conda activate exploratoryTree`
-   - `pip install -e .` alternativeley `pip install .`
+   - install [Anaconda](https://www.anaconda.com/)
+   - clone the repository with [git](https://git-scm.com/): `git clone https://github.com/wAOndering/exploratree.git` or [Download](https://github.com/wAOndering/exploratree/archive/refs/heads/main.zip)
+   - in command line navigate to the cloned directory (eg. `cd C:\git\exploratree`)
+   - in command lien type the following in the prompt:
+      - `conda env create -f environment.yaml`
+      - `conda activate exploratoryTree`
+      - `pip install -e .` alternativeley `pip install .`
 
 2. Notes:
    - The directory will not be added to the environment variables path so for the program to run come back to cloned/downloaded repository
+   - It is important to be both:
+      - in the conda environment `conda activate exploratoryTree`
+      - work within `cd C:\git\exploratree` or add it to environment variables
 
 ## Usage
 
@@ -28,6 +35,7 @@ Within the directory run the following command can be run:
       - yaml: useful for searching and parsing the tree
       - glob.txt: retain all the full path of every file
       - txt: when used with sublime text [here](https://www.sublimetext.com/) can collapse and navigate like in any explorer
+      - pathOfOrigin.txt: contains the original path of where the initial directory came from 
    - `exploratree-search`: browse the directory for specific key words and retrieve the full path
 
 1. **`exploratree-fakeDir`:**
@@ -47,7 +55,5 @@ Within the directory run the following command can be run:
 ## Output directory formats
 <img src="visual_export.png">
 
-## Notes
-
-In the future it may be worthwile putting a md file with keyworkds 
-and metada that may help the search etc.
+## Notes/TODO
+- add more flexible arguments to the command prompt argsparse etc.
