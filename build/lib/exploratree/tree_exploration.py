@@ -47,13 +47,16 @@ def save_all_full_path(directory_path, output_file):
             file.write(str(item) + '\n')
 
 ######### --- search files
-def search_file(directory_tree, file_name):
-    if 'name' in directory_tree and directory_tree['name'] == file_name:
-        return True
-    
-    if 'children' in directory_tree:
-        for child in directory_tree['children']:
-            if search_file(child, file_name):
-                return True
-    
-    return False
+def search_file(tree, search_string, current_path=''):
+    if 'name' in tree:
+        current_path = os.path.join(current_path, tree['name'])
+        if search_string in tree['name']:
+            print("Found:", current_path)
+    if 'children' in tree:
+        for child in tree['children']:
+            search_file(child, search_string, current_path)
+
+######### --- get the path of origin
+def pathOforigin(directory_path, output_file):
+    with open(output_file, 'w') as file:
+        file.write(directory_path)
